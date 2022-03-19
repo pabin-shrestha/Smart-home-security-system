@@ -1,13 +1,13 @@
 import smtplib
 
-smtpUser = 'nbpshrestha4@gmail.com'
-smtpPass = 'sexyboypabin'
+smtpUser = 'raspberrypitest2022@gmail.com'
+smtpPass = 'raspberrypi2022'
 
 toAdd = 'nbpshrestha4@gmail.com'
 fromAdd = smtpUser
 
-subject = 'Test email'
-header = 'To:' + toAdd + '\n' + fromAdd + '\n' + 'Subject:' + subject
+subject = 'Test email from raspberrypi'
+header = 'To:' + toAdd + '\n' + 'From:' +fromAdd + '\n' + 'Subject:' + subject
 body = 'From Python Program sending EMAIL, ALert !!! Alert !!!'
 print(header + '\n' +body)
 
@@ -19,4 +19,4 @@ s.login(smtpUser,smtpPass)
 print("login Successfull")
 s.sendmail(fromAdd,toAdd,header + '\n\n' +body)
 
-s.quit
+s.quit()
